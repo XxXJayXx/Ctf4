@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Vibes Challenge - CyberSecImamu</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #000;
+            color: #00ff00;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            text-shadow: 0 0 5px #00ff00;
+            animation: flicker 1.5s infinite;
+        }
+        p {
+            font-size: 1.2em;
+            text-shadow: 0 0 5px #00ff00;
+        }
+        .button {
+            display: inline-block;
+            background-color: #00ff00;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1em;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #005500;
+        }
+        .cybersecimamu {
+            color: #00ff00;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .animation-text {
+            font-size: 16px;
+            animation: typing 5s steps(40, end), blink 1s step-end infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid;
+            width: 25ch;
+            margin: 20px auto;
+        }
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 25ch; }
+        }
+        @keyframes blink {
+            from, to { border-color: transparent; }
+            50% { border-color: #00ff00; }
+        }
+        @keyframes matrix {
+            0% { background-position: 0 0; }
+            100% { background-position: 100% 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to the Hacker Vibes Challenge</h1>
+        <p>Find the flag by inspecting the hidden elements and API calls!</p>
+        <p>This challenge is brought to you by <span class="cybersecimamu" onclick="window.open('https://x.com/cybersecimamu?s=21', '_blank')">CyberSecImamu</span>. Follow us on Twitter!</p>
+
+        <a href="#" class="button" onclick="loadHiddenAPI()">Click me! Maybe I know something...</a>
+
+        <div class="animation-text">Scanning for vulnerabilities...</div>
+
+        <footer>
+            <p>Challenge by <span class="cybersecimamu" onclick="window.open('https://x.com/cybersecimamu?s=21', '_blank')">CyberSecImamu</span> &copy; 2024</p>
+        </footer>
+    </div>
+
+    <!-- الجزء الأول من الفلاق -->
+    <!-- ImamuF{qweop1211_ -->
+
+    <script src="script.js"></script>
+</body>
+</html>
