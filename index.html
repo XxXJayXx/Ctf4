@@ -69,10 +69,6 @@
             from, to { border-color: transparent; }
             50% { border-color: #00ff00; }
         }
-        @keyframes matrix {
-            0% { background-position: 0 0; }
-            100% { background-position: 100% 100%; }
-        }
     </style>
 </head>
 <body>
@@ -84,7 +80,7 @@
 
         <a href="#" class="button" onclick="loadHiddenAPI()">Click me! Maybe I know something...</a>
 
-        <div class="animation-text">Scanning for vulnerabilities...</div>
+        <div class="animation-text" id="apiResponse">Scanning for vulnerabilities...</div>
 
         <footer>
             <p>Challenge by <span class="cybersecimamu" onclick="window.open('https://x.com/cybersecimamu?s=21', '_blank')">CyberSecImamu</span> &copy; 2024</p>
@@ -94,6 +90,19 @@
     <!-- الجزء الأول من الفلاق -->
     <!-- ImamuF{qweop1211_ -->
 
-    <script src="script.js"></script>
+    <script>
+        
+        function loadHiddenAPI() {
+            fetch('http://20.74.209.101:3000/hidden-api')  // URL للـ API
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('apiResponse').innerText = data.message;
+                })
+                .catch(error => {
+                    document.getElementById('apiResponse').innerText = 'Error fetching data from the API';
+                });
+        }
+    </script>
+
 </body>
 </html>
